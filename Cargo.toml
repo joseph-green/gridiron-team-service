@@ -1,0 +1,28 @@
+[package]
+name = "team-service"
+version = "0.0.1"
+edition = "2018"
+
+[dependencies]
+warp = "0.3.1"
+tokio = { version = "1", features = ["full"] }
+tokio-postgres = { version = "0.7", features = ["with-chrono-0_4"] }
+async-std = { version = "1", features = ["attributes", "tokio1"] }
+uuid = { version = "0.8.2", features = ["v4", "serde"] }
+log = "0.4"
+pretty_env_logger = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_path_to_error = "0.1"
+serde_postgres = "0.2.0"
+hyper = "0.13.5"
+futures = "0.3"
+reqwest = { version =  "0.11.4", features = ["blocking","json"] }
+mysql = "21.0.1"
+postgres = { version = "0.19.1", features = ["with-uuid-0_8", "with-serde_json-1"] }
+mobc = "0.7"
+mobc-postgres = { version = "0.7", features = ["with-chrono-0_4"] }
+diesel = { version = "1.0.0", features = ["postgres"] }
+
+[[bin]]
+name = "team-service"
